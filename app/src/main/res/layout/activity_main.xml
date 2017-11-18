@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/LinearLayout_Base"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            tools:context="com.brandi.tabs.MainActivity">
+
+
+            <LinearLayout
+                android:id="@+id/Layout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight=".4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/E_Name_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event Name"
+                    android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/E_Name_pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/E_Desc_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Description" />
+
+        <EditText
+            android:id="@+id/E_Desc_pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+
+        <TextView
+            android:id="@+id/Tags_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tags" />
+
+        <CheckBox
+            android:id="@+id/CS_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Computer Science" />
+
+        <CheckBox
+            android:id="@+id/CE_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/CS_check"
+            android:layout_alignLeft="@+id/CS_check"
+            android:layout_alignStart="@+id/CS_check"
+            android:text="Computer Engineering" />
+
+                <Button
+                    android:id="@+id/button_add_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="34dp"
+                    android:layout_marginLeft="134dp"
+                    android:layout_marginStart="134dp"
+                    android:onClick="addDataButtonClicked"
+                    android:text="Add Data" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/Layout1"
+        android:layout_toEndOf="@+id/Layout1"
+        android:layout_toRightOf="@+id/Layout1"
+        android:layout_weight=".3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignStart="@+id/button"
+            android:layout_centerVertical="true"
+            android:text="Search by Tags"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:onClick="sendMessage"
+            android:text="Button"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
